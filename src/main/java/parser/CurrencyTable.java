@@ -3,7 +3,6 @@ package parser;
 import model.Currency;
 import model.CurrencyPOJO;
 import model.CurrencyTablePOJO;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
