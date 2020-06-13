@@ -1,0 +1,7 @@
+<pozycja>
+    <nazwa_waluty>dolar amerykański</nazwa_waluty>
+    <przelicznik>1</przelicznik>
+    <kod_waluty>USD</kod_waluty>
+    <kurs_kupna>2,8210</kurs_kupna>
+    <kurs_sprzedazy>2,8780</kurs_sprzedazy>
+</pozycja>
