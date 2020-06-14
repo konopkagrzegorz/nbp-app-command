@@ -1,4 +1,5 @@
 
+import file.FileGenerator;
 import url.UrlGenerator;
 
 import javax.xml.bind.JAXBContext;
@@ -88,8 +89,9 @@ public class Main {
 //            e.printStackTrace();
 //        }
 
-        UrlGenerator urlGenerator = new UrlGenerator("2022-01-29","2020-01-31");
+        UrlGenerator urlGenerator = new UrlGenerator("2017-01-29","2020-01-31");
         System.out.println(urlGenerator.getUrls());
+        FileGenerator fileGenerator = new FileGenerator(urlGenerator);
     }
 
     private static void downloadUsingNIO(String urlStr, String file) throws IOException {
