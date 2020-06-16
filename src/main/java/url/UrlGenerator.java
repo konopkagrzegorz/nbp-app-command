@@ -10,14 +10,13 @@ public class UrlGenerator {
     private static final String BASE_DIRECTORY_URL_TYPE = ".txt";
 
     private List<String> urls;
-
+    private LocalDate from;
+    private LocalDate to;
     public UrlGenerator(String dataFrom, String dataTo) throws Exception {
         this.urls = new ArrayList<>();
-        LocalDate from;
-        LocalDate to;
         try {
-            from = LocalDate.parse(dataFrom);
-            to = LocalDate.parse(dataTo);
+            this.from = LocalDate.parse(dataFrom);
+            this.to = LocalDate.parse(dataTo);
         } catch (Exception ex) {
             throw new Exception("Wrong data input!");
         }
@@ -40,5 +39,21 @@ public class UrlGenerator {
 
     public void setUrls(List<String> urls) {
         this.urls = urls;
+    }
+
+    public LocalDate getFrom() {
+        return from;
+    }
+
+    public void setFrom(LocalDate from) {
+        this.from = from;
+    }
+
+    public LocalDate getTo() {
+        return to;
+    }
+
+    public void setTo(LocalDate to) {
+        this.to = to;
     }
 }

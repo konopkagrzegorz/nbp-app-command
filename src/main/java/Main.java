@@ -1,6 +1,8 @@
 
 import file.FileGenerator;
+import parser.StringGenerator;
 import url.UrlGenerator;
+import url.UrlsGenerator;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -89,9 +91,15 @@ public class Main {
 //            e.printStackTrace();
 //        }
 
-        UrlGenerator urlGenerator = new UrlGenerator("2017-01-29","2020-01-31");
-        System.out.println(urlGenerator.getUrls());
-        FileGenerator fileGenerator = new FileGenerator(urlGenerator);
+        //UrlsGenerator urlsGenerator = new UrlsGenerator();
+        //urlsGenerator.getUrlsList().toString();
+        String input = "EUR 2013-01-28 2020-02-01";
+        StringGenerator stringGenerator = new StringGenerator(input);
+        System.out.println(stringGenerator.getFrom());
+        System.out.println(stringGenerator.getTo());
+        UrlGenerator urlGenerator = new UrlGenerator(stringGenerator.getFrom(),stringGenerator.getTo());
+        UrlsGenerator urlsGenerator = new UrlsGenerator(urlGenerator);
+
     }
 
     private static void downloadUsingNIO(String urlStr, String file) throws IOException {

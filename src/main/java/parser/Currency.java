@@ -1,4 +1,6 @@
-package model;
+package parser;
+
+import model.CurrencyPOJO;
 
 import java.math.BigDecimal;
 
