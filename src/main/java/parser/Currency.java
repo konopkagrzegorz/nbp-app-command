@@ -28,7 +28,7 @@ public class Currency {
         String buyingRate = currencyPOJO.getBuyingRate().replace(",",".");
         BigDecimal buyingRateDecimal = new BigDecimal(buyingRate);
         this.buyingRate = buyingRateDecimal;
-        String sellingRate = currencyPOJO.getBuyingRate().replace(",",".");
+        String sellingRate = currencyPOJO.getSellingRate().replace(",",".");
         BigDecimal sellingRateDecimal = new BigDecimal(sellingRate);
         this.sellingRate = sellingRateDecimal;
     }

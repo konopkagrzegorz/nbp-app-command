@@ -12,6 +12,7 @@ public class UrlGenerator {
     private List<String> urls;
     private LocalDate from;
     private LocalDate to;
+
     public UrlGenerator(String dataFrom, String dataTo) throws Exception {
         this.urls = new ArrayList<>();
         try {

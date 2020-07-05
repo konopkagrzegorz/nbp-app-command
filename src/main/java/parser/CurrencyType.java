@@ -14,5 +14,5 @@ public enum CurrencyType {
     EEK,
     NOK,
     SEK,
-    XDR,
+    XDR
 }

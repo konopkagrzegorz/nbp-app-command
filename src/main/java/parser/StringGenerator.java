@@ -2,13 +2,13 @@ package parser;
 
 public class StringGenerator {
 
+    private String input;
+
     private String currency;
 
     private String from;
 
     private String to;
-
-    private String input;
 
     public StringGenerator(String input) {
 
