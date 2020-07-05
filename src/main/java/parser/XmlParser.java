@@ -23,8 +23,8 @@ public class XmlParser {
         this.urlsGenerator = urlsGenerator;
         this.exchangeRate = exchangeRate;
         xif.setProperty(XMLInputFactory.SUPPORT_DTD, false);
-        if (CurrencyType.valueOf(currencyCode) == CurrencyType.EUR || CurrencyType.valueOf(currencyCode) == CurrencyType.USD
-                || CurrencyType.valueOf(currencyCode) == CurrencyType.GBP || CurrencyType.valueOf(currencyCode) == CurrencyType.CHF) {
+        if (currencyCode.equals("EUR") || currencyCode.equals("USD") || currencyCode.equals("GBP")
+         || currencyCode.equals("CHF")) {
             for (int i = 0; i < urlsGenerator.getUrlsList().size(); i++) {
                 try {
                     JAXBContext context = JAXBContext.newInstance(CurrencyTablePOJO.class);
@@ -36,7 +36,7 @@ public class XmlParser {
                         Currency tempCurrency = currencyTable.getCurrencies().get(j);
                         if (tempCurrency.getCurrencyType().equals(CurrencyType.valueOf(currencyCode))) {
                             exchangeRate.addCurrency(tempCurrency);
-                            System.out.println(tempCurrency);
+                            //System.out.println(tempCurrency);
                         }
                     }
                 } catch (JAXBException e) {

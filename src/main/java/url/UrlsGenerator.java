@@ -40,7 +40,7 @@ public class UrlsGenerator {
                         helper = inputLine.substring(5);
                         if ((Integer.parseInt(helper) >= this.from) && (Integer.parseInt(helper) <= this.to)) {
                             this.urlsList.add(BASE_DIRECTORY_URL + inputLine + BASE_DIRECTORY_URL_TYPE);
-                            System.out.println(BASE_DIRECTORY_URL + inputLine + BASE_DIRECTORY_URL_TYPE);
+                            //System.out.println(BASE_DIRECTORY_URL + inputLine + BASE_DIRECTORY_URL_TYPE);
                         }
                     }
                 }

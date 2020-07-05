@@ -62,7 +62,7 @@ public class ExchangeRate {
 //        }
 //        BigDecimal deviation = BigDecimal.valueOf(Math.pow((sum.doubleValue()/size.doubleValue()),2));
         }
-        BigDecimal deviation = sum.divide(size);
+        BigDecimal deviation = sum.divide(size,20,RoundingMode.HALF_UP);
         deviation = deviation.sqrt(new MathContext(3));
         return deviation;
     }

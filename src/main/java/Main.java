@@ -4,11 +4,16 @@ import rate.ExchangeRate;
 import url.UrlGenerator;
 import url.UrlsGenerator;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        String input = "EUR 2013-01-28 2020-01-31";
 
+        Scanner reader = new Scanner(System.in);
+        System.out.println("choose currency code and dates");
+        System.out.println("example input EUR 2013-01-28 2013-01-31");
+        String input = reader.nextLine();
         StringGenerator stringGenerator = new StringGenerator(input);
 
         UrlGenerator urlGenerator = new UrlGenerator(stringGenerator.getFrom(), stringGenerator.getTo());
