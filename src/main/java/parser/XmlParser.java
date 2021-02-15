@@ -3,7 +3,6 @@ package parser;
 import model.CurrencyTablePOJO;
 import rate.ExchangeRate;
 import url.UrlsGenerator;
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
@@ -36,7 +35,6 @@ public class XmlParser {
                         Currency tempCurrency = currencyTable.getCurrencies().get(j);
                         if (tempCurrency.getCurrencyType().equals(CurrencyType.valueOf(currencyCode))) {
                             exchangeRate.addCurrency(tempCurrency);
-                            //System.out.println(tempCurrency);
                         }
                     }
                 } catch (JAXBException e) {

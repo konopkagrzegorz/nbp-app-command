@@ -1,7 +1,6 @@
 package model;
 
 import javax.xml.bind.annotation.*;
-import java.math.BigDecimal;
 
 @XmlRootElement(name = "pozycja")
 @XmlAccessorType(XmlAccessType.PROPERTY)

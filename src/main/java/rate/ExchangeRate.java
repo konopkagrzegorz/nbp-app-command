@@ -57,10 +57,6 @@ public class ExchangeRate {
             square = square.pow(2);
             sum = sum.add(square);
 
-//            sum = sum.add(BigDecimal.valueOf
-//                    (Math.pow(currencies.get(i).getSellingRate().doubleValue() - avg.doubleValue(),2)));
-//        }
-//        BigDecimal deviation = BigDecimal.valueOf(Math.pow((sum.doubleValue()/size.doubleValue()),2));
         }
         BigDecimal deviation = sum.divide(size,20,RoundingMode.HALF_UP);
         deviation = deviation.sqrt(new MathContext(3));

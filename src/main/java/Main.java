@@ -21,8 +21,8 @@ public class Main {
 
         ExchangeRate exchangeRate = new ExchangeRate();
         XmlParser xmlParser = new XmlParser(exchangeRate, urlsGenerator, stringGenerator.getCurrency());
-        System.out.println(exchangeRate.getAverageBuingRate());
-        System.out.println(exchangeRate.standardSellingDeviation());
+        System.out.println(String.format("Average buying rate: %.4f", exchangeRate.getAverageBuingRate()));
+        System.out.println(String.format("Standard selling deviation: %.4f", exchangeRate.standardSellingDeviation()));
 
     }
 }
