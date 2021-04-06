@@ -7,7 +7,6 @@ task description: https://www.smart4aviation.aero/java_developer/task.php
 
 ## 1. Additional libraries
 - JAXB
-- Apache Commons IO
 
 ## 2. How to open project?
 
